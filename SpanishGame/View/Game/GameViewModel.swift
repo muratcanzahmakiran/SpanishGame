@@ -14,6 +14,11 @@ private extension Attempt {
 final class GameViewModel {
     
     let interactor: TranslationsInteractorInterface
+    private(set) lazy var timer: RoundTimer = {
+        return RoundTimer(interval: 5) { [unowned self] in
+            processAttemptResult(isSuccessful: false)
+        }
+    }()
     
     var updateHandler: ((GameViewModelUpdate) -> Void)!
     
@@ -45,14 +50,17 @@ final class GameViewModel {
     }
     
     func validateAttempt(_ attempt: Attempt) {
-        let isSuccessfulAttempt = attempt.isCorrect == currentTranslation?.isCorrect
-        if isSuccessfulAttempt {
+        processAttemptResult(isSuccessful: attempt.isCorrect == currentTranslation?.isCorrect)
+    }
+    
+    private func processAttemptResult(isSuccessful: Bool) {
+        if isSuccessful {
             correctAttemps += 1
         } else {
             wrongAttemps += 1
         }
         
-        updateHandler(.attemptResult(succeeded: isSuccessfulAttempt))
+        updateHandler(.attemptResult(succeeded: isSuccessful))
     }
     
     @MainActor
@@ -61,6 +69,8 @@ final class GameViewModel {
         
         let translation = interactor.fetchRandomTranslation(excluding: previousWords)
         currentTranslation = translation
+        
+        timer.start()
         
         updateHandler(.nextTranslation(english: translation.english, spanish: translation.spanish))
     }

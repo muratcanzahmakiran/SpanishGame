@@ -18,6 +18,8 @@
 		AB58FE6B28986A4300E5EB69 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FE6A28986A4300E5EB69 /* GameViewController.swift */; };
 		AB58FE7028986A4500E5EB69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB58FE6F28986A4500E5EB69 /* Assets.xcassets */; };
 		AB58FE7E28986A4500E5EB69 /* SpanishGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FE7D28986A4500E5EB69 /* SpanishGameTests.swift */; };
+		ABAB7816289B18FE00F951D4 /* RoundTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB7815289B18FE00F951D4 /* RoundTimer.swift */; };
+		ABAB7818289B1B9600F951D4 /* RoundTimerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB7817289B1B9600F951D4 /* RoundTimerInterface.swift */; };
 		ABDD110B2899B0710037BE90 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDD110A2899B0710037BE90 /* BackgroundView.swift */; };
 		ABDF015228987042005E988E /* TranslationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDF015128987042005E988E /* TranslationsInteractor.swift */; };
 		ABDF015428987097005E988E /* WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDF015328987097005E988E /* WordPair.swift */; };
@@ -50,6 +52,8 @@
 		AB58FE7428986A4500E5EB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB58FE7928986A4500E5EB69 /* SpanishGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpanishGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB58FE7D28986A4500E5EB69 /* SpanishGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpanishGameTests.swift; sourceTree = "<group>"; };
+		ABAB7815289B18FE00F951D4 /* RoundTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTimer.swift; sourceTree = "<group>"; };
+		ABAB7817289B1B9600F951D4 /* RoundTimerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTimerInterface.swift; sourceTree = "<group>"; };
 		ABDD110A2899B0710037BE90 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		ABDF015128987042005E988E /* TranslationsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationsInteractor.swift; sourceTree = "<group>"; };
 		ABDF015328987097005E988E /* WordPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPair.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				AB3CA8EB289AA04300C21A1A /* WordPairStorageInterface.swift */,
 				ABDF015928987717005E988E /* WordPairStorage.swift */,
 				ABDF015328987097005E988E /* WordPair.swift */,
+				ABAB7817289B1B9600F951D4 /* RoundTimerInterface.swift */,
+				ABAB7815289B18FE00F951D4 /* RoundTimer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +291,8 @@
 				ABDD110B2899B0710037BE90 /* BackgroundView.swift in Sources */,
 				AB3CA8E8289A9EA800C21A1A /* GameViewModelInterface.swift in Sources */,
 				ABDF015A28987717005E988E /* WordPairStorage.swift in Sources */,
+				ABAB7816289B18FE00F951D4 /* RoundTimer.swift in Sources */,
+				ABAB7818289B1B9600F951D4 /* RoundTimerInterface.swift in Sources */,
 				AB58FE6B28986A4300E5EB69 /* GameViewController.swift in Sources */,
 				ABDF015428987097005E988E /* WordPair.swift in Sources */,
 				AB3CA8EA289A9F4500C21A1A /* TranslationsInteractorInterface.swift in Sources */,
