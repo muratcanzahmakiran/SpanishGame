@@ -7,6 +7,12 @@
 
 import Foundation
 
+// Configuration
+private var roundTimeInterval = 5.0
+private var maxAttempts = 15
+private var maxWrongAttemps = 3
+// ---
+
 private extension Attempt {
     var isCorrect: Bool { self == .correct }
 }
@@ -59,6 +65,10 @@ final class GameViewModel<Interactor: TranslationsInteractorInterface,
             correctAttemps += 1
         } else {
             wrongAttemps += 1
+        }
+        
+        if correctAttemps + wrongAttemps >= maxAttempts || wrongAttemps >= maxWrongAttemps {
+            exit(0)
         }
         
         emitUpdate(.attemptResult(succeeded: isSuccessful))
