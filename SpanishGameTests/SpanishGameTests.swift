@@ -8,7 +8,33 @@
 import XCTest
 @testable import SpanishGame
 
-class SpanishGameTests: XCTestCase {
+//private final class MockTranslationsInteractor: TranslationsInteractorInterface {
+//    
+//    let isInitializationSuccessful: Bool
+//    let translation: Translation
+//    
+////    private var is
+//    
+//    init(isInitializationSuccessful: Bool, translation: Translation) {
+//        self.isInitializationSuccessful = isInitializationSuccessful
+//        self.translation = translation
+//    }
+//    
+//    func initializeTranslations() async throws {
+//        guard isInitializationSuccessful else {
+//            throw NSError()
+//        }
+//        
+//    }
+//    
+//    func fetchRandomTranslation(excluding usedWords: [String]) -> Translation {
+//        
+//    }
+//    
+//    
+//}
+
+class GameViewModelTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -33,4 +59,7 @@ class SpanishGameTests: XCTestCase {
         }
     }
 
+    func testStartGame() {
+//        let gameVM = GameViewModel(interactor: <#T##TranslationsInteractorInterface#>)
+    }
 }

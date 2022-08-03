@@ -21,7 +21,7 @@ protocol TranslationsInteractorInterface {
 }
 
 // ProjectDefaults
-extension TranslationsInteractor: TranslationsInteractorInterface {
+extension TranslationsInteractor: TranslationsInteractorInterface where Storage == WordPairStorage {
     
     convenience init() {
         self.init(storage: WordPairStorage.shared)

@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 final class GameViewController: UIViewController {
     @IBOutlet private weak var loadingView: UIView!
     

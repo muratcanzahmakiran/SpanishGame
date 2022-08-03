@@ -20,7 +20,7 @@ enum GameViewModelUpdate {
 }
 
 protocol GameViewModelInterface: AnyObject {
-    var updateHandler: ((GameViewModelUpdate) -> Void)! { get set }
+    var updateHandler: ((GameViewModelUpdate) -> Void)? { get set }
     
     var correctAttemps: Int { get }
     var wrongAttemps: Int { get }
@@ -31,7 +31,9 @@ protocol GameViewModelInterface: AnyObject {
 }
 
 // Project Defaults
-extension GameViewModel: GameViewModelInterface {
+extension GameViewModel: GameViewModelInterface
+where Interactor == TranslationsInteractor<WordPairStorage>,
+      Timer == RoundTimer {
     
     convenience init() {
         self.init(interactor: TranslationsInteractor())

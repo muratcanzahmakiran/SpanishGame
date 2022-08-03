@@ -11,16 +11,18 @@ private extension Attempt {
     var isCorrect: Bool { self == .correct }
 }
 
-final class GameViewModel {
+@MainActor
+final class GameViewModel<Interactor: TranslationsInteractorInterface,
+                          Timer: RoundTimerInterface> {
     
-    let interactor: TranslationsInteractorInterface
-    private(set) lazy var timer: RoundTimer = {
-        return RoundTimer(interval: 5) { [unowned self] in
-            processAttemptResult(isSuccessful: false)
+    let interactor: Interactor
+    private(set) lazy var timer: Timer = {
+        return Timer(interval: 5) { [unowned self] in
+            self.processAttemptResult(isSuccessful: false)
         }
     }()
     
-    var updateHandler: ((GameViewModelUpdate) -> Void)!
+    var updateHandler: ((GameViewModelUpdate) -> Void)?
     
     private var previousWords: [String] = []
     private var currentTranslation: Translation?
@@ -28,22 +30,21 @@ final class GameViewModel {
     private(set) var correctAttemps = 0
     private(set) var wrongAttemps = 0
     
-    init(interactor: TranslationsInteractorInterface) {
+    init(interactor: Interactor) {
         self.interactor = interactor
     }
     
-    @MainActor
     private func emitUpdate(_ update: GameViewModelUpdate) {
-        updateHandler(update)
+        updateHandler?(update)
     }
     
     func startGame() {
-        updateHandler(.loading(show: true))
+        emitUpdate(.loading(show: true))
         Task { [weak self] in
             do {
                 try await interactor.initializeTranslations()
-                await self?.fetchNextTranslation()
-                await self?.emitUpdate(.loading(show: false))
+                self?.fetchNextTranslation()
+                self?.emitUpdate(.loading(show: false))
             }
             
         }
@@ -60,10 +61,9 @@ final class GameViewModel {
             wrongAttemps += 1
         }
         
-        updateHandler(.attemptResult(succeeded: isSuccessful))
+        emitUpdate(.attemptResult(succeeded: isSuccessful))
     }
     
-    @MainActor
     func fetchNextTranslation() {
         currentTranslation.map { previousWords.append($0.english) }
         
@@ -72,6 +72,6 @@ final class GameViewModel {
         
         timer.start()
         
-        updateHandler(.nextTranslation(english: translation.english, spanish: translation.spanish))
+        emitUpdate(.nextTranslation(english: translation.english, spanish: translation.spanish))
     }
 }

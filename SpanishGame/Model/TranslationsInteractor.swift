@@ -7,11 +7,11 @@
 
 import Foundation
 
-final class TranslationsInteractor {
+final class TranslationsInteractor<Storage: WordPairStorageInterface> {
     
-    let storage: WordPairStorageInterface
+    let storage: Storage
     
-    init(storage: WordPairStorageInterface) {
+    init(storage: Storage) {
         self.storage = storage
     }
     
