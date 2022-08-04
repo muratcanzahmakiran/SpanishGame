@@ -16,6 +16,8 @@ enum TranslationsInteractorUpdate {
 
 protocol TranslationsInteractorInterface {
     
+    var isTranslationsInitialized: Bool { get }
+    
     func initializeTranslations() async throws
     func fetchRandomTranslation(excluding usedWords: [String]) -> Translation
 }

@@ -23,12 +23,14 @@ final class GameViewModel<Interactor: TranslationsInteractorInterface,
     
     let interactor: Interactor
     private(set) lazy var timer: Timer = {
-        return Timer(interval: 5) { [unowned self] in
+        return Timer(interval: roundTimeInterval) { [unowned self] in
             self.processAttemptResult(isSuccessful: false)
         }
     }()
     
     var updateHandler: ((GameViewModelUpdate) -> Void)?
+    
+    var roundDuration: TimeInterval { roundTimeInterval }
     
     private var previousWords: [String] = []
     private var currentTranslation: Translation?
@@ -45,16 +47,32 @@ final class GameViewModel<Interactor: TranslationsInteractorInterface,
     }
     
     func startGame() {
+        previousWords.removeAll()
+        currentTranslation = nil
+        
+        correctAttemps = 0
+        wrongAttemps = 0
+        
+        if interactor.isTranslationsInitialized {
+            completeGameStart()
+            return
+        }
+        
         emitUpdate(.loading(show: true))
         Task {
             do {
                 try await interactor.initializeTranslations()
-                fetchNextTranslation()
+                completeGameStart()
             } catch {
                 emitUpdate(.loadFailed(message: "Translations could not be loaded."))
             }
             emitUpdate(.loading(show: false))
         }
+    }
+    
+    private func completeGameStart() {
+        emitUpdate(.scoreChanged)
+        fetchNextTranslation()
     }
     
     func validateAttempt(_ attempt: Attempt) {
@@ -68,14 +86,16 @@ final class GameViewModel<Interactor: TranslationsInteractorInterface,
             wrongAttemps += 1
         }
         
+        emitUpdate(.scoreChanged)
         if correctAttemps + wrongAttemps >= maxAttempts || wrongAttemps >= maxWrongAttemps {
-            exit(0)
+            emitUpdate(.gameOver)
+            return
         }
         
-        emitUpdate(.attemptResult(succeeded: isSuccessful))
+        fetchNextTranslation()
     }
     
-    func fetchNextTranslation() {
+    private func fetchNextTranslation() {
         currentTranslation.map { previousWords.append($0.english) }
         
         let translation = interactor.fetchRandomTranslation(excluding: previousWords)

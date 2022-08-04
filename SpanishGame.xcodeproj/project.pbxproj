@@ -20,6 +20,7 @@
 		AB58FE7E28986A4500E5EB69 /* GameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FE7D28986A4500E5EB69 /* GameViewModelTests.swift */; };
 		ABAB7816289B18FE00F951D4 /* RoundTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB7815289B18FE00F951D4 /* RoundTimer.swift */; };
 		ABAB7818289B1B9600F951D4 /* RoundTimerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB7817289B1B9600F951D4 /* RoundTimerInterface.swift */; };
+		ABAB781A289C223600F951D4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ABAB7819289C223600F951D4 /* README.md */; };
 		ABDD110B2899B0710037BE90 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDD110A2899B0710037BE90 /* BackgroundView.swift */; };
 		ABDF015228987042005E988E /* TranslationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDF015128987042005E988E /* TranslationsInteractor.swift */; };
 		ABDF015428987097005E988E /* WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDF015328987097005E988E /* WordPair.swift */; };
@@ -54,6 +55,7 @@
 		AB58FE7D28986A4500E5EB69 /* GameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelTests.swift; sourceTree = "<group>"; };
 		ABAB7815289B18FE00F951D4 /* RoundTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTimer.swift; sourceTree = "<group>"; };
 		ABAB7817289B1B9600F951D4 /* RoundTimerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTimerInterface.swift; sourceTree = "<group>"; };
+		ABAB7819289C223600F951D4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ABDD110A2899B0710037BE90 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		ABDF015128987042005E988E /* TranslationsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationsInteractor.swift; sourceTree = "<group>"; };
 		ABDF015328987097005E988E /* WordPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPair.swift; sourceTree = "<group>"; };
@@ -79,13 +81,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB3CA8E3289A9DC500C21A1A /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
 		AB3CA8E4289A9DE100C21A1A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +89,6 @@
 				AB3CA8EB289AA04300C21A1A /* WordPairStorageInterface.swift */,
 				ABDF015928987717005E988E /* WordPairStorage.swift */,
 				ABDF015328987097005E988E /* WordPair.swift */,
-				ABAB7817289B1B9600F951D4 /* RoundTimerInterface.swift */,
-				ABAB7815289B18FE00F951D4 /* RoundTimer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +115,7 @@
 		AB58FE5A28986A4300E5EB69 = {
 			isa = PBXGroup;
 			children = (
+				ABAB7819289C223600F951D4 /* README.md */,
 				AB58FE6528986A4300E5EB69 /* SpanishGame */,
 				AB58FE7C28986A4500E5EB69 /* SpanishGameTests */,
 				AB58FE6428986A4300E5EB69 /* Products */,
@@ -143,8 +137,8 @@
 				ABDF014F28986FCC005E988E /* App */,
 				ABDF015028986FDC005E988E /* Assets */,
 				AB3CA8E4289A9DE100C21A1A /* Model */,
-				AB3CA8E3289A9DC500C21A1A /* Modules */,
 				ABDF015D289891D9005E988E /* View */,
+				ABAB781B289C2EF200F951D4 /* Utility */,
 			);
 			path = SpanishGame;
 			sourceTree = "<group>";
@@ -155,6 +149,15 @@
 				AB58FE7D28986A4500E5EB69 /* GameViewModelTests.swift */,
 			);
 			path = SpanishGameTests;
+			sourceTree = "<group>";
+		};
+		ABAB781B289C2EF200F951D4 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				ABAB7817289B1B9600F951D4 /* RoundTimerInterface.swift */,
+				ABAB7815289B18FE00F951D4 /* RoundTimer.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		ABDF014F28986FCC005E988E /* App */ = {
@@ -268,6 +271,7 @@
 			files = (
 				ABDF0156289871B4005E988E /* words.json in Resources */,
 				AB58FE7028986A4500E5EB69 /* Assets.xcassets in Resources */,
+				ABAB781A289C223600F951D4 /* README.md in Resources */,
 				AB3CA8E02899BBF700C21A1A /* LaunchScreen.storyboard in Resources */,
 				AB3CA8DE2899BBCB00C21A1A /* Game.storyboard in Resources */,
 			);

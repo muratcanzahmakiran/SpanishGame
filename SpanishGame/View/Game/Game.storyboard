@@ -20,39 +20,53 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hny-xS-Xdn">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="736.66666666666663"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCk-Zc-V42">
-                                        <rect key="frame" x="0.0" y="200" width="390" height="536.66666666666663"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCk-Zc-V42" customClass="TranslationView" customModule="SpanishGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="200" width="390" height="516.66666666666663"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zY8-5P-F1Y">
-                                                <rect key="frame" x="10" y="214" width="370" height="109"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a random Spanish Translation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZ4-V4-eS5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="370" height="58"/>
-                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an English word" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HL-yN-zHT">
-                                                        <rect key="frame" x="0.0" y="88" width="370" height="21"/>
-                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a random Spanish Translation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZ4-V4-eS5">
+                                                <rect key="frame" x="10" y="-258" width="370" height="58"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an English word" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HL-yN-zHT">
+                                                <rect key="frame" x="10" y="248" width="370" height="21"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="zY8-5P-F1Y" secondAttribute="trailing" constant="10" id="2D2-i8-gt2"/>
-                                            <constraint firstItem="zY8-5P-F1Y" firstAttribute="centerX" secondItem="bCk-Zc-V42" secondAttribute="centerX" id="Ds6-Gb-tfu"/>
-                                            <constraint firstItem="zY8-5P-F1Y" firstAttribute="leading" secondItem="bCk-Zc-V42" secondAttribute="leading" constant="10" id="fnw-dG-BQD"/>
-                                            <constraint firstItem="zY8-5P-F1Y" firstAttribute="centerY" secondItem="bCk-Zc-V42" secondAttribute="centerY" id="w1I-Bg-xwN"/>
+                                            <constraint firstItem="4HL-yN-zHT" firstAttribute="leading" secondItem="bCk-Zc-V42" secondAttribute="leading" constant="10" id="3Bd-bq-82l"/>
+                                            <constraint firstAttribute="trailing" secondItem="nZ4-V4-eS5" secondAttribute="trailing" constant="10" id="4ZY-iJ-XCT"/>
+                                            <constraint firstAttribute="trailing" secondItem="4HL-yN-zHT" secondAttribute="trailing" constant="10" id="DHi-xb-S6j"/>
+                                            <constraint firstAttribute="bottom" secondItem="nZ4-V4-eS5" secondAttribute="bottom" id="F0x-Xk-y9v"/>
+                                            <constraint firstItem="nZ4-V4-eS5" firstAttribute="top" secondItem="bCk-Zc-V42" secondAttribute="top" id="HXL-G9-YZe"/>
+                                            <constraint firstItem="4HL-yN-zHT" firstAttribute="centerX" secondItem="bCk-Zc-V42" secondAttribute="centerX" id="IXO-R9-UwD"/>
+                                            <constraint firstItem="nZ4-V4-eS5" firstAttribute="centerX" secondItem="bCk-Zc-V42" secondAttribute="centerX" id="QLG-g7-csI"/>
+                                            <constraint firstItem="4HL-yN-zHT" firstAttribute="centerY" secondItem="bCk-Zc-V42" secondAttribute="centerY" id="Xpg-6t-IkV"/>
+                                            <constraint firstItem="nZ4-V4-eS5" firstAttribute="leading" secondItem="bCk-Zc-V42" secondAttribute="leading" constant="10" id="zyV-dS-AkM"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="F0x-Xk-y9v"/>
+                                                <exclude reference="HXL-G9-YZe"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="englishLabel" destination="4HL-yN-zHT" id="YUS-Bx-P6C"/>
+                                            <outlet property="spanishLabel" destination="nZ4-V4-eS5" id="NG9-Jz-lEi"/>
+                                            <outlet property="spanishLabelEndConstraint" destination="F0x-Xk-y9v" id="Ndn-w7-BoC"/>
+                                            <outlet property="spanishLabelInitialConstraint" destination="6fm-hK-o12" id="CPI-UI-a9n"/>
+                                            <outlet property="spanishLabelStartConstraint" destination="HXL-G9-YZe" id="nz8-9q-mDs"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="ZGb-O2-5S9"/>
                                 <constraints>
                                     <constraint firstItem="ZGb-O2-5S9" firstAttribute="trailing" secondItem="bCk-Zc-V42" secondAttribute="trailing" id="0YK-VZ-lty"/>
-                                    <constraint firstItem="ZGb-O2-5S9" firstAttribute="bottom" secondItem="bCk-Zc-V42" secondAttribute="bottom" id="LFL-Py-38B"/>
+                                    <constraint firstAttribute="top" secondItem="nZ4-V4-eS5" secondAttribute="bottom" id="6fm-hK-o12"/>
+                                    <constraint firstItem="ZGb-O2-5S9" firstAttribute="bottom" secondItem="bCk-Zc-V42" secondAttribute="bottom" constant="20" id="LFL-Py-38B"/>
                                     <constraint firstItem="bCk-Zc-V42" firstAttribute="leading" secondItem="ZGb-O2-5S9" secondAttribute="leading" id="dpi-Lq-zPa"/>
                                 </constraints>
                             </view>
@@ -169,6 +183,9 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53.333333333333343" id="LS5-6h-tay"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="IU1-iS-wjX"/>
@@ -223,9 +240,8 @@
                     <navigationItem key="navigationItem" id="P0L-Ga-1Fc"/>
                     <connections>
                         <outlet property="correctAttemptLabel" destination="GhN-Xj-zZY" id="6pg-Xo-hsI"/>
-                        <outlet property="englishLabel" destination="4HL-yN-zHT" id="HYC-7Q-wqQ"/>
                         <outlet property="loadingView" destination="Twy-BL-alg" id="r0L-VQ-fcm"/>
-                        <outlet property="spanishLabel" destination="nZ4-V4-eS5" id="Nbf-yo-AYY"/>
+                        <outlet property="translationView" destination="bCk-Zc-V42" id="Qne-jh-rDb"/>
                         <outlet property="wrongAttemptLabel" destination="y8i-ik-UkE" id="qzm-L6-utO"/>
                     </connections>
                 </viewController>

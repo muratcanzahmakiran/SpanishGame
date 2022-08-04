@@ -11,6 +11,8 @@ final class TranslationsInteractor<Storage: WordPairStorageInterface> {
     
     let storage: Storage
     
+    var isTranslationsInitialized: Bool { !storage.wordPairs.isEmpty }
+    
     init(storage: Storage) {
         self.storage = storage
     }

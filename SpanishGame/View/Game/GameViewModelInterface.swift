@@ -16,18 +16,20 @@ enum GameViewModelUpdate {
     case loading(show: Bool)
     case loadFailed(message: String)
     case nextTranslation(english: String, spanish: String)
-    case attemptResult(succeeded: Bool)
+    case scoreChanged
+    case gameOver
 }
 
 protocol GameViewModelInterface: AnyObject {
     var updateHandler: ((GameViewModelUpdate) -> Void)? { get set }
+    
+    var roundDuration: TimeInterval { get }
     
     var correctAttemps: Int { get }
     var wrongAttemps: Int { get }
     
     func startGame()
     func validateAttempt(_ attempt: Attempt)
-    func fetchNextTranslation()
 }
 
 // Project Defaults
