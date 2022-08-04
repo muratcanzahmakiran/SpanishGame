@@ -45,7 +45,7 @@
 		AB3CA8E7289A9EA800C21A1A /* GameViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelInterface.swift; sourceTree = "<group>"; };
 		AB3CA8E9289A9F4500C21A1A /* TranslationsInteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationsInteractorInterface.swift; sourceTree = "<group>"; };
 		AB3CA8EB289AA04300C21A1A /* WordPairStorageInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPairStorageInterface.swift; sourceTree = "<group>"; };
-		AB58FE6328986A4300E5EB69 /* SpanishGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpanishGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB58FE6328986A4300E5EB69 /* Spanish Word Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spanish Word Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB58FE6628986A4300E5EB69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB58FE6828986A4300E5EB69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AB58FE6A28986A4300E5EB69 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		AB58FE6428986A4300E5EB69 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB58FE6328986A4300E5EB69 /* SpanishGame.app */,
+				AB58FE6328986A4300E5EB69 /* Spanish Word Game.app */,
 				AB58FE7928986A4500E5EB69 /* SpanishGameTests.xctest */,
 			);
 			name = Products;
@@ -206,7 +206,7 @@
 			);
 			name = SpanishGame;
 			productName = SpanishGame;
-			productReference = AB58FE6328986A4300E5EB69 /* SpanishGame.app */;
+			productReference = AB58FE6328986A4300E5EB69 /* Spanish Word Game.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AB58FE7828986A4500E5EB69 /* SpanishGameTests */ = {
@@ -449,6 +449,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SpanishGame/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Spanish Game";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -459,7 +460,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = mcz.SpanishGame;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Spanish Word Game";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -475,6 +477,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SpanishGame/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Spanish Game";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -485,7 +488,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = mcz.SpanishGame;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Spanish Word Game";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

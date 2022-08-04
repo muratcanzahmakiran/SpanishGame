@@ -1,6 +1,6 @@
-# SpanishGame
+# Spanish Word Game
 
-##Project Description
+## Project Details
 SpanishGame implemented as a single screen application. MVVM pattern is used for the architecture.
 Model construcs:
 * WordPairStorage: Loads and caches word list.
