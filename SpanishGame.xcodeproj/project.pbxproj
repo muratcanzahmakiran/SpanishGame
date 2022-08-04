@@ -17,7 +17,7 @@
 		AB58FE6928986A4300E5EB69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FE6828986A4300E5EB69 /* SceneDelegate.swift */; };
 		AB58FE6B28986A4300E5EB69 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FE6A28986A4300E5EB69 /* GameViewController.swift */; };
 		AB58FE7028986A4500E5EB69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB58FE6F28986A4500E5EB69 /* Assets.xcassets */; };
-		AB58FE7E28986A4500E5EB69 /* SpanishGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FE7D28986A4500E5EB69 /* SpanishGameTests.swift */; };
+		AB58FE7E28986A4500E5EB69 /* GameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58FE7D28986A4500E5EB69 /* GameViewModelTests.swift */; };
 		ABAB7816289B18FE00F951D4 /* RoundTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB7815289B18FE00F951D4 /* RoundTimer.swift */; };
 		ABAB7818289B1B9600F951D4 /* RoundTimerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB7817289B1B9600F951D4 /* RoundTimerInterface.swift */; };
 		ABDD110B2899B0710037BE90 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDD110A2899B0710037BE90 /* BackgroundView.swift */; };
@@ -51,7 +51,7 @@
 		AB58FE6F28986A4500E5EB69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB58FE7428986A4500E5EB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB58FE7928986A4500E5EB69 /* SpanishGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpanishGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB58FE7D28986A4500E5EB69 /* SpanishGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpanishGameTests.swift; sourceTree = "<group>"; };
+		AB58FE7D28986A4500E5EB69 /* GameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelTests.swift; sourceTree = "<group>"; };
 		ABAB7815289B18FE00F951D4 /* RoundTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTimer.swift; sourceTree = "<group>"; };
 		ABAB7817289B1B9600F951D4 /* RoundTimerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTimerInterface.swift; sourceTree = "<group>"; };
 		ABDD110A2899B0710037BE90 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		AB58FE7C28986A4500E5EB69 /* SpanishGameTests */ = {
 			isa = PBXGroup;
 			children = (
-				AB58FE7D28986A4500E5EB69 /* SpanishGameTests.swift */,
+				AB58FE7D28986A4500E5EB69 /* GameViewModelTests.swift */,
 			);
 			path = SpanishGameTests;
 			sourceTree = "<group>";
@@ -307,7 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB58FE7E28986A4500E5EB69 /* SpanishGameTests.swift in Sources */,
+				AB58FE7E28986A4500E5EB69 /* GameViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,13 +46,14 @@ final class GameViewModel<Interactor: TranslationsInteractorInterface,
     
     func startGame() {
         emitUpdate(.loading(show: true))
-        Task { [weak self] in
+        Task {
             do {
                 try await interactor.initializeTranslations()
-                self?.fetchNextTranslation()
-                self?.emitUpdate(.loading(show: false))
+                fetchNextTranslation()
+            } catch {
+                emitUpdate(.loadFailed(message: "Translations could not be loaded."))
             }
-            
+            emitUpdate(.loading(show: false))
         }
     }
     
